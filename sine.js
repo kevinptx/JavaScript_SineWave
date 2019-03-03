@@ -11,7 +11,7 @@ let color = "rgb(191, 255, 0)";
 //OnDraw() is associated with HTML5 Canvas
 function OnDraw() {
 
-  time = time + -0.25;
+  time = time + -0.3;
   let canvas = document.getElementById("mycanvas");
   let line = canvas.getContext("2d");
 
@@ -23,8 +23,9 @@ function OnDraw() {
   for (cnt = -1; cnt <= canvas.width; cnt++) {
     line.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 1 + Math.sin(time + cnt * 0.045) * 60));
   }
-
+  //setting the width of the line
   line.lineWidth = 6;
+  //setting the color of the line with the value from line 9
   line.strokeStyle = color;
   line.stroke();
 }
