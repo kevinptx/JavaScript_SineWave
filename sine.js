@@ -13,21 +13,20 @@ function OnDraw() {
 
   time = time + -0.25;
   let canvas = document.getElementById("mycanvas");
-  let dataLine = canvas.getContext("2d");
-  let value = document.getElementById("lineWidth");
+  let line = canvas.getContext("2d");
 
   //The clearRect() method clears the specified pixels within a given rectangle.
-  dataLine.clearRect(0, 0, canvas.width, canvas.height);
+  line.clearRect(0, 0, canvas.width, canvas.height);
 
   //The beginPath() method begins a path, or resets the current path.
-  dataLine.beginPath();
+  line.beginPath();
   for (cnt = -1; cnt <= canvas.width; cnt++) {
-    dataLine.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 1 + Math.sin(time + cnt * 0.045) * 60));
+    line.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 1 + Math.sin(time + cnt * 0.045) * 60));
   }
 
-  dataLine.lineWidth = 6;
-  dataLine.strokeStyle = color;
-  dataLine.stroke();
+  line.lineWidth = 6;
+  line.strokeStyle = color;
+  line.stroke();
 }
 
 init();
