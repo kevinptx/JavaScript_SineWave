@@ -11,7 +11,7 @@ let color = "rgb(191, 255, 0)";
 //OnDraw() is associated with HTML5 Canvas
 function OnDraw() {
 
-  time = time + -0.3;
+  time = time + -0.35;
   let canvas = document.getElementById("mycanvas");
   let line = canvas.getContext("2d");
 
